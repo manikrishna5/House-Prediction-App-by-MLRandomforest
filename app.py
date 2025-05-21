@@ -7,8 +7,8 @@ locality_cluster_map = joblib.load("locality_cluster_map.pkl")
 
 st.title("House Price Prediction App")
 property_type = st.number_input("BHK (Property Type)", min_value=1, max_value=10, step=1)
-area_sqft = st.number_input("Area in Sqft", min_value=100.0)
-age_of_property = st.number_input("Age of Property (years)", min_value=0.0)
+area_sqft = st.number_input("Area in Sqft", min_value=100.0,step=1.0)
+age_of_property = st.number_input("Age of Property (years)", min_value=0.0,step=1.0)
 
 construction_status = st.selectbox("Construction Status", [
     'Under Construction', 'New', 'Ready to move', 'Resale'

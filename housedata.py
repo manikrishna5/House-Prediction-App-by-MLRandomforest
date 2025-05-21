@@ -99,6 +99,7 @@ rf_pred = rf.predict(X_test)
 import joblib
 
 joblib.dump(rf,'house_predict_rf.pkl')
+joblib.dump(locality_cluster_map, "locality_cluster_map.pkl")
 
 
 

@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 
-df = pd.read_csv(r"C:\\Users\\Mani Krishna Karri\\Downloads\\Makaan Dataset.csv")
+df = pd.read_csv("Makaan_Dataset.csv")
 valid_keywords = ['New', 'Under', 'Ready', 'year', 'years', 'old']
 is_valid_age = df['Age of property'].astype(str).str.contains('|'.join(valid_keywords), case=False)
 df.loc[~is_valid_age, 'Age of property'] = np.nan
